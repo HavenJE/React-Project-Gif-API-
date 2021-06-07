@@ -1,38 +1,58 @@
-/* .App {
+.App {
   text-align: center;
+  background-color: aqua;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-fluid {
+  
+  background-image: url(https://wallpapercave.com/wp/wp2510496.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  width: 800px;
+  height: 1500px;
+  background-color: #161409 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* body .bg-dark {
+  background-color: #f1db0f !important;
 } */
+
+.container-fluid {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding: 100px;
+  border-radius: 50px;
+  box-shadow: 10px 10px 5px 0px rgba (0, 0, 0, 0.75);
+
+   /* background-color: #e0ded0; */
+}
+
+  h1 {
+    background-color: #050505;
+    color: aqua;
+    padding: 20px
+  }
+
+  .Search-label, .input-keyword, .Submit-button {
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-transform: uppercase; */
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(4, 12, 12);
+    border-radius: 50px;
+    border: 30x solid black;
+   
+    background-color: #436988;
+    
+    padding: 5px 20px;
+    text-align: center;
+    margin-top: 20px;
+
+    border-radius: 50px;
+    /* border: 30x solid black; */
+    /* background-color: #e0ded0; */    
+  } 
+  

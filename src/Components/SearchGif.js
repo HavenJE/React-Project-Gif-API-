@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from 'react-bootstrap';
 
 class SearchGif extends React.Component {
 
@@ -15,20 +16,37 @@ class SearchGif extends React.Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.fetchMyGifs(this.state.keyword)
-        
+
         // (this.state.keyword) is an argument that is stored in the state 
+    }
+
+    handleClear = e => {
+        // this.setState({
+        //     keyword: ""
+        // })
+        this.props.fetchedImage = ""
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label for="search">
-                        Enter Your Favoured Gif keyword here:
-                </label>
-                    <input name="search" onClick={this.handleClick} />
-                    <input type="submit" />
-                </form>
+                <span className="search-box">
+                    <form onSubmit={this.handleSubmit}>
+                       <div> <label htmlFor="Search" className="Search-label"> 
+                       Enter Your Favoured Gif Keyword Below: 
+                       </label> </div> 
+
+                         <div> <input name="Search" onClick={this.handleClick} className="input-keyword" placeholder="Gif Keyword"/> </div>   
+                       <p htmlFor="submit"> <input type="submit" className="Submit-button"/> </p>
+                       
+                        {/* <div>
+                            <label htmlFor="Clear">Clear Your Gif Search: </label>
+                        </div>
+                        <p htmlFor="clear"> 
+                          <submit type="Submit" onClick={this.handleClear} > Clear </submit>  
+                        </p> */}
+                    </form>
+                </span>
             </div>
         )
     }
