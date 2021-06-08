@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from 'react-bootstrap';
+import {  } from 'react-bootstrap';
 
 class SearchGif extends React.Component {
 
@@ -36,7 +36,8 @@ class SearchGif extends React.Component {
                        Enter Your Favoured Gif Keyword Below: 
                        </label> </div> 
 
-                         <div> <input name="Search" onClick={this.handleClick} className="input-keyword" placeholder="Gif Keyword"/> </div>   
+                         <div> <input name="Search" onClick={this.handleClick} className="input-keyword" placeholder="Gif Keyword"/> 
+                         </div>   
                        <p htmlFor="submit"> <input type="submit" className="Submit-button"/> </p>
                        
                         {/* <div>

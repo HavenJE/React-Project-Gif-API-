@@ -12,13 +12,14 @@ const ContainerGifList = () => {
         const json = await result.json()
 
         setGifs(
-            json.data.slice(0,10).map(gif => gif.images.original.url)
+            json.data.slice(0, 20).map(gif => gif.images.original.url)
         )
     }
-// usestate is passing an Array above 
+    // usestate is passing an Array above 
     return (
         <div>
             <SearchGif fetchMyGifs={fetchMyGifs} />
+
             <ListofGif fetchedImage={gifs} />
         </div>
     )
