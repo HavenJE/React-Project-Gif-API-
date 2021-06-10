@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import ListofGif from '../Components/ListofGif'
 import SearchGif from '../Components/SearchGif'
 
+
 const ContainerGifList = () => {
 
     const [gifs, setGifs] = useState([])
+    
 
     const fetchMyGifs = async (keyword = "") => {
         const result = await fetch(`https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=brad69BfHqZ1f23STRtucr3b2ybXBZyM`)
@@ -12,7 +14,7 @@ const ContainerGifList = () => {
         const json = await result.json()
 
         setGifs(
-            json.data.slice(0, 20).map(gif => gif.images.original.url)
+            json.data.slice(0, 30).map(gif => gif.images.original.url)
         )
     }
     // usestate is passing an Array above 

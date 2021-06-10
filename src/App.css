@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   background-color: aqua;
+  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmErag51D6tvaJFvSERZAiYcRI-SHt0l-qpXQO_8VATkxnD1Fg58LEwtRBUKfT0Z5l9NE&usqp=CAU);
+  background-repeat: no-repeat; */
+  
 }
 
 .search-box {
@@ -49,7 +52,7 @@
     /* margin: 5px; */
 
   } 
-    .gifs-list {
+    .gifsList {
       width: 99%;
       height: 550px;
       margin: 10px 10px;
@@ -65,7 +68,7 @@
       overflow: auto;
     }
 
-    .gif-display {
+    .gifDisplay {
       position: relative;
       max-width: 500px;
       max-height: 500px;
@@ -116,7 +119,7 @@
         max-width: 500px;
         margin: 10px auto;
         line-height: 28px;
-        font-size: 14px;
+        font-size: 20px;
       }
 
       .socials {
@@ -125,6 +128,7 @@
         align-items: center;
         justify-content: center;
         margin: 1rem 0 3rem 0;
+        
       }
 
       .socials li {
@@ -134,10 +138,11 @@
       .socials a {
         text-decoration: none;
         color: #fff;
+        
       }
 
       .socials a i{
-        font-size: 1.1rem;
+        font-size: 2rem;
         transition: color .4s ease;
       }
 

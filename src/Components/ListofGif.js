@@ -1,13 +1,12 @@
-import React from 'react'
+// import React from 'react'
 
-class ListofGif extends React.Component {
+const ListofGif = ({fetchedImage}) => {
+    // to avoid .props nesting, we used {fetchedImage}
     
-    render () {
        return (
-            <div className="gifs-list" key="gifs-list">
-                {this.props.fetchedImage.map(gif => <img src={gif} className="gif-display" alt="gifs-images"/>)}
+            <div className="gifsList">
+                {fetchedImage.map(gif => <img src={gif} className="gifDisplay" alt="gifs-images"/>)}
             </div>
         ) 
-    }
 } 
 export default ListofGif

@@ -1,42 +1,45 @@
-import React from "react"
-import {  } from 'react-bootstrap';
+import {useState} from "react"
 
-class SearchGif extends React.Component {
+// import {  } from 'react-bootstrap';
 
-    state = {
-        keyword: ""
+const SearchGif = ({fetchMyGifs}) => {
+// in the above code, we are de-structuring the object ({fetchMyGifs})
+    const [keyword, setKeyword] = useState([]) 
+    // in the above code, we are de-structuring an Array using the useState method 
+    // We could also pass a specific keyword e.g. "dogs" or "minions", but will keep it an empty string
+
+    const [clear, setClear] = useState(null)
+    // state = {
+    //     keyword: ""
+    // }
+
+    const handleChange = e => {
+        setKeyword(e.target.value)
     }
 
-    handleClick = e => {
-        this.setState({
-            keyword: e.target.value
-        })
-    }
-
-    handleSubmit = e => {
+    const handleSubmit = e => {
         e.preventDefault()
-        this.props.fetchMyGifs(this.state.keyword)
+        fetchMyGifs(keyword)
 
         // (this.state.keyword) is an argument that is stored in the state 
     }
 
-    handleClear = e => {
-        // this.setState({
-        //     keyword: ""
-        // })
-        this.props.fetchedImage = ""
-    }
+    // const handleClear = e => {
+    //     const clearChildren = () => {
+    //         e.target.setClear.value = ''
+    //     }
+    //    clearChildren()  
+    // }
 
-    render() {
         return (
             <div>
-                <span className="search-box">
-                    <form onSubmit={this.handleSubmit}>
+                <span className="search-box" >
+                    <form onSubmit={handleSubmit} key={clear}>
                        <div> <label htmlFor="Search" className="Search-label"> 
                        Enter Your Favoured Gif Keyword Below: 
                        </label> </div> 
 
-                         <div> <input name="Search" onClick={this.handleClick} className="input-keyword" placeholder="Gif Keyword"/> 
+                         <div> <input name="Search" onClick={handleChange} className="input-keyword" placeholder="Gif Keyword"/> 
                          </div>   
                        <p htmlFor="submit"> <input type="submit" className="Submit-button"/> </p>
                        
@@ -44,13 +47,13 @@ class SearchGif extends React.Component {
                             <label htmlFor="Clear">Clear Your Gif Search: </label>
                         </div>
                         <p htmlFor="clear"> 
-                          <submit type="Submit" onClick={this.handleClear} > Clear </submit>  
+                          <button type="reset" onClick={handleClear} key={setClear}> Clear </button>  
                         </p> */}
                     </form>
                 </span>
             </div>
         )
-    }
+    
 }
 export default SearchGif
 
