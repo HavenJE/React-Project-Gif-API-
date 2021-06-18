@@ -1,6 +1,7 @@
-import {useState} from "react"
-
-// import {  } from 'react-bootstrap';
+import React from "react"
+import {useState} from 'react'
+import {useRef} from 'react'
+import {  } from 'react-bootstrap';
 
 const SearchGif = ({fetchMyGifs}) => {
 // in the above code, we are de-structuring the object ({fetchMyGifs})
@@ -8,10 +9,10 @@ const SearchGif = ({fetchMyGifs}) => {
     // in the above code, we are de-structuring an Array using the useState method 
     // We could also pass a specific keyword e.g. "dogs" or "minions", but will keep it an empty string
 
-    const [clear, setClear] = useState(null)
-    // state = {
-    //     keyword: ""
-    // }
+    const keywordInput = useRef(null)
+    const clearKeywordInput = () => {
+        keywordInput.current.value = ''; 
+    }
 
     const handleChange = e => {
         setKeyword(e.target.value)
@@ -24,31 +25,24 @@ const SearchGif = ({fetchMyGifs}) => {
         // (this.state.keyword) is an argument that is stored in the state 
     }
 
-    // const handleClear = e => {
-    //     const clearChildren = () => {
-    //         e.target.setClear.value = ''
-    //     }
-    //    clearChildren()  
-    // }
-
         return (
             <div>
                 <span className="search-box" >
-                    <form onSubmit={handleSubmit} key={clear}>
+                    <form onSubmit={handleSubmit} >
                        <div> <label htmlFor="Search" className="Search-label"> 
-                       Enter Your Favoured Gif Keyword Below: 
+                       Enter Your Favoured Gif Keyword Below 
                        </label> </div> 
 
-                         <div> <input name="Search" onClick={handleChange} className="input-keyword" placeholder="Gif Keyword"/> 
+                         <div> <input name="Search" onClick={handleChange} className="input-keyword" placeholder="Gif Keyword" ref={keywordInput}/> 
                          </div>   
                        <p htmlFor="submit"> <input type="submit" className="Submit-button"/> </p>
                        
                         {/* <div>
-                            <label htmlFor="Clear">Clear Your Gif Search: </label>
+                            <label htmlFor="Clear" className="clear-label">Clear Your Gif Search Below: </label>
+                        </div> */}
+                        <div htmlFor="clear" > 
+                          <button type="reset" onClick={clearKeywordInput} className="clear-button1"> Clear Gif Keyword </button>  
                         </div>
-                        <p htmlFor="clear"> 
-                          <button type="reset" onClick={handleClear} key={setClear}> Clear </button>  
-                        </p> */}
                     </form>
                 </span>
             </div>

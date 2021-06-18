@@ -1,0 +1,36 @@
+{
+    "minions": [
+        {
+            "id": 1,
+            "likes": 1,
+            "description": "minion_gif1"
+        },
+        {
+            "id": 2,
+            "likes": 2,
+            "description": "minion_gif2"
+        },
+        {
+            "id": 3,
+            "likes": 3,
+            "description": "minion_gif3"
+        }
+    ],
+    "tom&Jerry": [
+        {
+            "id": 1,
+            "likes": 1,
+            "description": "T&J_gif1"
+        },
+        {
+            "id": 2,
+            "likes": 2,
+            "description": "T&J_gif2"
+        },
+        {
+            "id": 3,
+            "likes": 3,
+            "description": "T&J_gif3"
+        }
+    ]
+}

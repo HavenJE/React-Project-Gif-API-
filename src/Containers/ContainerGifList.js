@@ -1,27 +1,31 @@
 import React, { useState } from 'react'
 import ListofGif from '../Components/ListofGif'
 import SearchGif from '../Components/SearchGif'
+import MinionList from '../Components/MinionList'
 
-
-const ContainerGifList = () => {
+const ContainerGifList = ({ newMinionGif, gif }) => {
 
     const [gifs, setGifs] = useState([])
-    
+
 
     const fetchMyGifs = async (keyword = "") => {
-        const result = await fetch(`https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=brad69BfHqZ1f23STRtucr3b2ybXBZyM`)
-
+        const result = await fetch(`https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=brad69BfHqZ1f23STRtucr3b2ybXBZyM`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            }
+            // body: JSON.stringify(newMinionGif)
+        })
         const json = await result.json()
-
-        setGifs(
-            json.data.slice(0, 30).map(gif => gif.images.original.url)
-        )
+        console.log(json)
+        setGifs(json.data.slice(0, 30).map(gif => gif.images.original.url))
     }
-    // usestate is passing an Array above 
+    
     return (
         <div>
             <SearchGif fetchMyGifs={fetchMyGifs} />
-
+            
             <ListofGif fetchedImage={gifs} />
         </div>
     )
