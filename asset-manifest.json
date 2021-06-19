@@ -1,25 +1,8 @@
 {
-  "files": {
-    "main.css": "/React-Project-Gif-API-/static/css/main.2882d2f9.chunk.css",
-    "main.js": "/React-Project-Gif-API-/static/js/main.8abf654d.chunk.js",
-    "main.js.map": "/React-Project-Gif-API-/static/js/main.8abf654d.chunk.js.map",
-    "runtime-main.js": "/React-Project-Gif-API-/static/js/runtime-main.51357fac.js",
-    "runtime-main.js.map": "/React-Project-Gif-API-/static/js/runtime-main.51357fac.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/React-Project-Gif-API-/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.514bd2d0.chunk.js": "/React-Project-Gif-API-/static/js/2.514bd2d0.chunk.js",
-    "static/js/2.514bd2d0.chunk.js.map": "/React-Project-Gif-API-/static/js/2.514bd2d0.chunk.js.map",
-    "static/js/3.4930ec83.chunk.js": "/React-Project-Gif-API-/static/js/3.4930ec83.chunk.js",
-    "static/js/3.4930ec83.chunk.js.map": "/React-Project-Gif-API-/static/js/3.4930ec83.chunk.js.map",
-    "index.html": "/React-Project-Gif-API-/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/React-Project-Gif-API-/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.2882d2f9.chunk.css.map": "/React-Project-Gif-API-/static/css/main.2882d2f9.chunk.css.map",
-    "static/js/2.514bd2d0.chunk.js.LICENSE.txt": "/React-Project-Gif-API-/static/js/2.514bd2d0.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.51357fac.js",
-    "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.514bd2d0.chunk.js",
-    "static/css/main.2882d2f9.chunk.css",
-    "static/js/main.8abf654d.chunk.js"
-  ]
+  "main.css": "static/css/main.3918d06b.css",
+  "main.css.map": "static/css/main.3918d06b.css.map",
+  "main.js": "static/js/main.b8c32432.js",
+  "main.js.map": "static/js/main.b8c32432.js.map",
+  "static/js/0.ca32684f.chunk.js": "static/js/0.ca32684f.chunk.js",
+  "static/js/0.ca32684f.chunk.js.map": "static/js/0.ca32684f.chunk.js.map"
 }
