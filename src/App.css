@@ -23,19 +23,24 @@
   
 }
 
-.minion-list {
+/* .minion-list {
   background-color: rgb(218, 233, 233);
-  color: #050505;
+  color: rgb(70, 67, 67)5;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   justify-content: center;
-  width: 400px;
+  width: 700px;
   height: 230px;
 
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 13px;
   border-radius: 25px;
-  margin: 30px 40px
+  margin: 30px 40px;
+  padding: 5px 10px;
+} */
+
+.minion-no {
+  list-style: none;
+  font-weight: bold;
 }
 
 .Search-label, .input-keyword, .Submit-button, .clear-label, .clear-button,  .clear-GifList {
@@ -155,38 +160,50 @@
 
     .gifDisplay {
       position: relative;
-      max-width: 300px;
-      max-height: 300px;
-      background-color: rgb(193, 209, 209);
-      margin: 30px 10px;
-      padding: 20px 15px;
-      display: grid;
-      flex-direction:column;
-      box-shadow: 10px 5px 5px rgb(0,0,0,0,0.5);
-      transition: 1s ease-in-out;
-
-      display: inline-block;
-      grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-      column-gap: 2%;
-      overflow: auto;
-    }
-
-    .gifsList {
-      width: 1200px;
-      height: 100%;
-      /* align-items: center; */
-      justify-content: center;
-      /* margin: 40px 600px; */
-     
-      background-color: rgb(84, 93, 84);
+      max-width: 1400px;
+      max-height: 800px;
+      margin: auto;
+      background-color: rgb(100, 110, 110);
       padding: 10px 0px 5px 30px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 15px;
       line-height: 1.5em;
-      display: inline-block;
       border-radius: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+      column-gap: 1%;
+      overflow: auto;
+     
     }
 
+    .gifsList {
+      position: relative;
+      max-width: 300px;
+      max-height: 300px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      
+      margin: 5px 5px;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+
+      box-shadow: 10px 5px 5px rgb(0,0,0,0,0.5);
+      transition: 1s ease-in-out;
+      background-color: rgb(169, 192, 169);
+      
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.5em;
+    }
+
+    .gifImage {
+      position: relative;
+      max-width: 250px;
+      max-height: 200px;
+    }
+    
     header h3 {
       text-align: left;
       display: inline;

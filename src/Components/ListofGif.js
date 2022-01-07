@@ -1,6 +1,8 @@
 import React from 'react'
 import { } from 'react-bootstrap';
-import LikerCounter from '../Components/LikerCounter'
+import GifComponent from './GifComponent'
+
+// import LikerCounter from '../Components/LikerCounter'
 
 const ListofGif = ({ fetchedImage, gif }) => {
     // to avoid .props nesting, we used {fetchedImage}
@@ -11,10 +13,14 @@ const ListofGif = ({ fetchedImage, gif }) => {
     // }
 
     return (
-        <div>
-            <div className="gifsList" >
-                {fetchedImage.map(gif => <img src={gif} className="gifDisplay" alt="gifs-images"/>)}
-                <LikerCounter /> 
+        <div >
+            <div className="gifDisplay" >
+                {fetchedImage.map((gif) => {
+                    return (
+                        <GifComponent gif={gif}/> 
+                    )
+                }
+                )}
             </div>
             {/* <p htmlFor="clear">
                 <button type="reset" onClick={clearMyGifsList} className="clear-GifList" > Clear Your Gif List </button>
@@ -25,3 +31,4 @@ const ListofGif = ({ fetchedImage, gif }) => {
 }
 export default ListofGif
 
+// className ="d-inline-block "

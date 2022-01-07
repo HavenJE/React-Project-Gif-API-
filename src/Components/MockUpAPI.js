@@ -2,10 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import MinionList from './MinionList'   
+import {v4} from 'uuid'
 
 const MockUpAPI = () => {
 
-    const [minions, setMinions] = useState(null);
+    const [minions, setMinions] = useState([ ]);
 
     useEffect(() => {
         fetch('http://localhost:8000/minions')
@@ -22,8 +23,8 @@ const MockUpAPI = () => {
     }, []);
 
     return (
-        <div className="jsonServer">
-            { <MinionList minions={minions} />}
+        <div key={v4()} className="jsonServer">
+            {minions && <MinionList key={v4()} minions={minions} />}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ListofGif from '../Components/ListofGif'
 import SearchGif from '../Components/SearchGif'
-import MinionList from '../Components/MinionList'
+// import MinionList from '../Components/MinionList'
 
 const ContainerGifList = ({ newMinionGif, gif }) => {
 

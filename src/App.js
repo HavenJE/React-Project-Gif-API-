@@ -3,22 +3,22 @@ import React from 'react'
 import FooterGifs from './Components/FooterGifs'
 import ContainerGifList from './Containers/ContainerGifList'
 import About from './Components/About'
-import MinionList from './Components/MinionList'
+import MockUpAPI from './Components/MockUpAPI'
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 import { Navbar, Nav, Container } from 'react-bootstrap';
-
+import {v4} from 'uuid'
 // import SearchGif from './Components/SearchGif'
 // import ListofGif from './Components/ListofGif'
-// import MockUpAPI from './Components/MockUpAPI'
+// import MinionList from './Components/MinionList'
 
 
 const App = () => {
     return (
         <Router>
-            <div className="App">
+            <div key={v4()} className="App">
 
                 <Navbar bg="dark" variant="dark">
                     <Container>
@@ -26,17 +26,15 @@ const App = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/App"> Home </Nav.Link>
                             <Nav.Link as={Link} to="/About"> About Gif App </Nav.Link>
-                            <Nav.Link as={Link} to="/MinionList"> Your Gif Details </Nav.Link>
+                            <Nav.Link as={Link} to="/MockUpAPI"> Your Gif Details </Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
 
-                <div className="App-container">
+                <div key={v4()} className="App-container">
                     <Switch>
-                        <Route exact path="/" component={App} />
                         <Route exact path="/About" component={About} />
-                        <Route exact path="/MinionList" component={MinionList} />
-
+                        <Route exact path="/MockUpAPI" component={MockUpAPI} />
                     </Switch>
 
                     {/* <div className="image1-div">
@@ -44,10 +42,10 @@ const App = () => {
                         </img>
 
                     </div> */}
-                    <div className="container-fluid" >
+                    <div key={v4()} className="container-fluid" >
                         <ContainerGifList />
                     </div>
-                    <div>
+                    <div key={v4()}>
                         <FooterGifs />
                     </div>
                 </div>

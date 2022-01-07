@@ -18,10 +18,9 @@ const SearchGif = ({fetchMyGifs}) => {
         setKeyword(e.target.value)
     }
 
-    const handleSubmit = e => {
-        e.preventDefault()
+    const handleSubmit = e => {        
         fetchMyGifs(keyword)
-
+        e.preventDefault()
         // (this.state.keyword) is an argument that is stored in the state 
     }
 
@@ -33,7 +32,7 @@ const SearchGif = ({fetchMyGifs}) => {
                        Enter Your Favoured Gif Keyword Below 
                        </label> </div> 
 
-                         <div> <input name="Search" onClick={handleChange} className="input-keyword" placeholder="Gif Keyword" ref={keywordInput}/> 
+                         <div> <input name="Search" onChange={handleChange} className="input-keyword" placeholder="Gif Keyword" ref={keywordInput}/> 
                          </div>   
                        <p htmlFor="submit"> <input type="submit" className="Submit-button"/> </p>
                        
